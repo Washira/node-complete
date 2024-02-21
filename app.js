@@ -21,10 +21,11 @@ const server = http.createServer((req, res) => {
       const parsedBody = Buffer.concat(body).toString(); // Concatenate all the chunks and convert to string
       console.log(parsedBody);
       const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.txt', message); // Write the message to a file
-      res.statusCode = 302;
-      res.setHeader('Location', '/'); // Redirect to the root
-      return res.end();
+      fs.writeFile('message.txt', message, (err) => { // Write the message to a file
+        res.statusCode = 302;
+        res.setHeader('Location', '/'); // Redirect to the root
+        return res.end();
+      }); // Write the message to a file
     });
   }
   res.setHeader('Content-Type', 'text/html');
