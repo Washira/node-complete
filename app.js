@@ -17,18 +17,15 @@ const server = http.createServer((req, res) => {
       console.log(chunk);
       body.push(chunk);
     });
-    req.on('end', () => { // This will be executed once the data has been fully read
+    return req.on('end', () => { // This will be executed once the data has been fully read
       const parsedBody = Buffer.concat(body).toString(); // Concatenate all the chunks and convert to string
       console.log(parsedBody);
       const message = parsedBody.split('=')[1];
       fs.writeFileSync('message.txt', message); // Write the message to a file
-      console.log('Message written to file!');
+      res.statusCode = 302;
+      res.setHeader('Location', '/'); // Redirect to the root
+      return res.end();
     });
-    console.log('Redirecting...');
-    fs.writeFileSync('message.txt', 'DUMMY');
-    res.statusCode = 302;
-    res.setHeader('Location', '/'); // Redirect to the root
-    return res.end();
   }
   res.setHeader('Content-Type', 'text/html');
   res.write('<html>');
