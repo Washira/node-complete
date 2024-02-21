@@ -2,7 +2,6 @@
 
 เลือก Branch ตาม content ที่ต้องการ
 
-[Node.js Complete Guide's Contents](#nodejs-complete-guides-contents)
 - [Node.js Complete Guide's Contents](#nodejs-complete-guides-contents)
   - [1. Routing Requests](#1-routing-requests)
   - [2. Parsing Request Bodies](#2-parsing-request-bodies)
