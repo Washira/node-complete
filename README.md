@@ -7,6 +7,7 @@
     - [1. Routing Requests](#1-routing-requests)
     - [2. Parsing Request Bodies](#2-parsing-request-bodies)
     - [3. Blocking and Non-blocking Code](#3-blocking-and-non-blocking-code)
+    - [4. Using the Node Modules System](#4-using-the-node-modules-system)
 
 ## Basics
 
@@ -22,4 +23,8 @@ Node.js runtime and global modules
 
 ### 3. Blocking and Non-blocking Code
 
-ปรับการทำงานของ non-blocking ด้วยการใช้ `writeFile()` ทดแทน `writeFileSync()`
+ปรับการทำงานของ Blocking IO ด้วยการใช้ `writeFile()` ทดแทน `writeFileSync()`
+
+### 4. Using the Node Modules System
+
+การทำงานของ `module.exports` 
