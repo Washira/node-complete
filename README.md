@@ -12,6 +12,7 @@
     - [5. Understanding NPM Scripts](#5-understanding-npm-scripts)
       - [Global Features vs Core Modules vs Third-Party Modules](#global-features-vs-core-modules-vs-third-party-modules)
     - [6. Using Nodemon for Autorestarts](#6-using-nodemon-for-autorestarts)
+      - [Types of Errors](#types-of-errors)
 
 ## Basics
 
@@ -60,3 +61,9 @@ option install --> `--save`: production, `--save-dev`: development
 เพิ่ม script บน `start`: `nodemon app.js`
 แล้วรัน `npm start`
 ** รัน `nodemon app.js` ตรงๆไม่ได้ เพราะ ไม่ได้ติดตั้ง nodemon แบบ globally **
+
+#### Types of Errors
+
+- Syntax Errors: เกิดจาก การใช้ Javascript Syntax ผิด
+- Runtime Errors: 
+- Logical Errors:
