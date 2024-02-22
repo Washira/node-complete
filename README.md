@@ -11,6 +11,7 @@
   - [Development Workflow and Debugging](#development-workflow-and-debugging)
     - [5. Understanding NPM Scripts](#5-understanding-npm-scripts)
       - [Global Features vs Core Modules vs Third-Party Modules](#global-features-vs-core-modules-vs-third-party-modules)
+    - [6. Using Nodemon for Autorestarts](#6-using-nodemon-for-autorestarts)
 
 ## Basics
 
@@ -53,3 +54,9 @@ option install --> `--save`: production, `--save-dev`: development
 - `Core Node.js Modules`: Examples would be the file-system module ("fs"), the path module ("path") or the Http module ("http")
 
 - `Third-party Modules`: Installed via npm install - you can add any kind of feature to your app via this way
+
+### 6. Using Nodemon for Autorestarts
+
+เพิ่ม script บน `start`: `nodemon app.js`
+แล้วรัน `npm start`
+** รัน `nodemon app.js` ตรงๆไม่ได้ เพราะ ไม่ได้ติดตั้ง nodemon แบบ globally **
